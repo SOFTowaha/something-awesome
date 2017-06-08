@@ -31,7 +31,7 @@
   "scripts": {
     "format": "prettier --single-quote --write 'frontend/src/*.js' 'server/*.js'",
     "dev": "watchify frontend/src/main.js -o public/bundle.js -d | node server/portal_server.js",
-    "start": "watchify frontend/src/main.js -o public/bundle.js -d | cross-env NODE_ENV=production node server/portal_server.js",
+    "start": "browserify frontend/src/main.js -o public/bundle.js -d | cross-env NODE_ENV=production node server/portal_server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
